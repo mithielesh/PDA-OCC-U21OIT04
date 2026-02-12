@@ -26,6 +26,26 @@ Source: UCI Machine Learning Repository
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
+## Project Architecture
+
+```mermaid
+flowchart LR
+    A[Online Retail II Dataset]
+    B[Data Loading]
+    C[Data Cleaning]
+    D[Feature Engineering<br/>Customer RFM Metrics]
+    E[Regression Model<br/>Revenue Prediction]
+    F[Classification Model<br/>High-Value Detection]
+    G[Model Evaluation<br/>R2 · RMSE · Accuracy]
+    H[Processed Data Export]
+    I[Streamlit Dashboard]
+
+    A --> B --> C --> D
+    D --> E --> G
+    D --> F --> G
+    G --> H --> I
+```
+
 ## Execution
 ```bash
 python main.py
